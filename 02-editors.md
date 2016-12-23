@@ -60,14 +60,14 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
---
+I experimented with all 3, and although Vim and emacs both seem powerful, I think their learning curves are too steep for me right now. Nano was the most comfortable for me.
 
 ###Q2. Graphical Editor
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I downloaded Sublime because it got great reviews. I've played around with it a bit and it is in fact very powerful, especially with the package control feature. By typing Command + Shift + P I can select "Package Control: Install Package" and install packages and plug-ins to customize my IDE experience. I just installed a package that allows me to use Git functions directly from Sublime which is awesome.
+
+--
 
  
