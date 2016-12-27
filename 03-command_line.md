@@ -30,11 +30,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > -G colorize - helps with distinguishing content types
-    -p sort by most recent time modified - always an important tool
-    -1 list out with new lines - makes contents easier to read
-    -R list out contents Recursively - efficient way of viewing everything in sub-directories
-    -r reverse order of alphabetical sort- another way to sort and sorting is a powerful tool
+ 1. -G colorize - helps with distinguishing content types
+ 2. -p sort by most recent time modified - always an important tool
+ 3. -1 list out with new lines - makes contents easier to read
+ 4. -R list out contents Recursively - efficient way of viewing everything in sub-directories
+ 5. -r reverse order of alphabetical sort- another way to sort and sorting is a powerful tool
 
 ---
 
