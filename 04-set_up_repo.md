@@ -62,6 +62,8 @@ And now `cd` into the `/dsp` folder. Your terminal window should now show show s
 
 In this step, you will be using both the terminal and your favorite text editor.  
 
+**Edits from Sublime Text**
+
 You will learn how to complete the challenges in your text editor and then `push` them up to GitHub when you're done. We will **not** be doing any branching, merging, rebasing or any of that fun stuff (yet). GitHub is also a great way to save your work, even if you aren't done with a  challenge at a particular time.  
 
 There is some important terminology to consider for this part before we move on.  
