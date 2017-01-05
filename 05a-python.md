@@ -103,7 +103,7 @@ date_stop = '07-28-2015'
 
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE 937 Days
+>>  937 Days
 
 b.  
 ```
