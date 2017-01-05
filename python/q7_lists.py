@@ -15,14 +15,14 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    return len(filter(lambda x: len(x) > 1 and x[0] == x[-1], words))
 
 
 def front_x(words):
     """
     Given a list of strings, return a list with the strings in sorted
     order, except group all the strings that begin with 'x' first.
-    e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
+        e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
          ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'].
 
     >>> front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
@@ -32,8 +32,11 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
-
+    xes = filter(lambda x: x[0] == 'x', words)
+    new_words = [x for x in words if x not in xes]
+    xes.sort()
+    new_words.sort()
+    return xes + new_words
 
 def sort_last(tuples):
     """
@@ -49,7 +52,9 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    tup_dict = {x: max(x) for x in tuples}
+    return sorted(tup_dict, key=tup_dict.get)
+
 
 
 def remove_adjacent(nums):
@@ -68,7 +73,18 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    new_nums = []
+    i = 0
+    while i < len(nums):
+        if i == 0:
+            new_nums.append(nums[i])
+            i += 1
+        elif nums[i] != new_nums[len(new_nums) - 1]:
+            new_nums.append(nums[i])
+            i += 1
+        else:
+            i += 1
+    return new_nums
 
 
 def linear_merge(list1, list2):
@@ -85,4 +101,5 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    def linear_merge(list1, list2):
+        return sorted(list1 + list2)
