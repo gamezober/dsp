@@ -2,27 +2,39 @@
 
 >>
 
-from random import random
-import thinkstats2, thinkplot
+'from random import random'
+'import thinkstats2, thinkplot'
 
+Create a distribution of 1000 random floats between 0 and 1
+
+~~~
 random_dist = []
-for i in range(1, 1001):
+for i in range(1000):
   random_dist.append(random())
+~~~
 
-#pmf
+Create a Pmf out of random distribution and plot
+
+~~~
 random_pmf = thinkstats2.Pmf(random_dist, label='Random Pmf')
 thinkplot.Config(xlabel='Random Number', ylabel='PMF')
 thinkplot.Pmf(random_pmf)
+~~~
 
-#recreate Cumulative distribution function for purpose of understanding
+Recreate Cumulative distribution function for purpose of understanding
+
+~~~
 def cdf(dist, x):
   below_x = [y for y in dist if y <= x]
   return float(len(below_x))/len(dist)
+~~~
 
-#Plotting CDF
+Create and plot CDF
 
+~~~
 random_cdf = thinkstats2.Cdf(random_dist)
 thinkplot.Cdf(random_cdf)
-thiknplot.Show(random_cdf, xlabel='rand_num', ylabel='y')
+thinkplot.Show(random_cdf, xlabel='rand_num', ylabel='CDF')
+~~~
 
-When plotting the PMF of random_dist, it is hard to tell any patterns because there are so many values. When you plot the values and their percentiles using CDFs, however, the distribution is a straight line and therefore uniform
+When plotting the PMF of random_dist, it is hard to tell any patterns because there are so many values. When you plot the values and their percentiles using CDFs, however, the distribution is a straight line and therefore uniform.
