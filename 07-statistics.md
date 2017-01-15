@@ -80,33 +80,43 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
 >>
-#Bayes Formula applied to Elvis Twin Problem
+Bayes Formula applied to Elvis Twin Problem
 
-P(Identical | Twin Brother) = P(Identical) P(Twin Brother| Identical)/ P(Twin Brother)
-P(Twin Brother) = P(Fraternal) + P(Identical)
+P(Identical | Male Twin) = P(Identical) P(Male Twin| Identical)/ P(Male Twin)
+P(Male Twin) = P(Fraternal) + P(Identical)
 
-#Solve for
-P(Identical | Twin Brother) = ?
+We are tying to solve for the Likelihood of an Identical Twin given that the twin is a brother.
 
-#Given Data
+P(Identical | Male Twin) = ?
+
+Given Data
+
 P(Fraternal) = 1/125 = .008
 P(Identical) = 1/300 = .003
 
-#Deduced Likelihood of Twin Using Bayes Theory and Given Data
-P(Twin) = 1/125 + 1/300 = .0113
+We need to to calculate the probability of Elvis' brother being a Male in order to complete the Bayes Formula and solve for P(Identical | Male Twin). To do this we need to add the probabilities for all the possible ways that the brother could have been male (needs to be male to be identical).
 
-#Likelihood of a Twin given an instance of an Identical Twin is of course 100%
-P(Twin | Identical) = 1
+P(Male Twin) = p(Identical and Male) + p(fraternal and both male)
+P(Male Twin) = (1/300 * 1/2 + 1/125 * 1/2 * 1/2)
 
-#Plug it into Bayes
-P(Identical | Twin) = (.003) * (1) / (.0113)
-P(Identical | Twin) = 0.265 or 26.5%
+Identical twins could either be both boys or both girls so:
+
+P(Male Twin | Identical) = 1/2
+
+Plug it all into Bayes:
+
+P(Identical | Male Twin) = 1/300 * 1/2/ (1/300 * 1/2 + 1/125 * 1/2 * 1/2)
+
+= 1/600 / 11/3000
+= 5/11
+
+Therefore P(Identical | Male Twin) is 5/11 or 0.454.
 ---
 
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+In frequentist statistics data are infinitely repeatable random samples with fixed parameters, while from the Bayesian perspective, it is data is that fixed and the parameters are described probabilistically. 
 
 ---
 

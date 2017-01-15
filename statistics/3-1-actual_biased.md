@@ -1,7 +1,7 @@
 [Think Stats Chapter 3 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2004.html#toc31) (actual vs. biased)
 
 >> REPLACE THIS TEXT WITH YOUR RESPONSE
-#Use the NSFG respondent variable NUMKDHH to construct the actual distribution for #the number of children under 18 in the household.
+Use the NSFG respondent variable NUMKDHH to construct the actual distribution for the number of children under 18 in the household.
 
 'import nsfg'
 'import thinkstats2'
@@ -13,7 +13,7 @@ data = nsfg.ReadFemResp()
 data18 = data.numkdhh
 pmf18 = thinkstats2.Pmf(data18, label = 'Actual')
 
-#Now compute the biased distribution we would see if we surveyed the children and #asked them how many children under 18 (including themselves) are in their household.
+Now compute the biased distribution we would see if we surveyed the children and asked them how many children under 18 (including themselves) are in their household.
 
 Code for function that takes Pmf and returns Bias Pmf
 ~~~
@@ -28,7 +28,7 @@ bias = BiasPmf(pmf18, label = 'Bias')
 
 ~~~
 
-#Plot the actual and biased distributions:
+Plot the actual and biased distributions:
 
 ~~~
 thinkplot.PrePlot(2)
@@ -39,7 +39,7 @@ thinkplot.Show()
 
 ![](../pmfs.png)
 
-#and compute their means.
+and compute their means.
 
 `pmf18.Mean()`
 1.02
